@@ -1,0 +1,99 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Mono", monospace;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a1a;
+ 
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+.container {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 15px 25px 25px;
+  background: #2d2d2d;
+  box-shadow: 
+    0 8px 15px rgba(0, 0, 0, 0.3),
+    inset 0 0 20px rgba(0, 0, 0, 0.2);
+  border: 2px solid #3d3d3d;
+}
+
+.display {
+  height: 80px;
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: right;
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #e0e0e0;
+  background: #1f1f1f;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 
+    inset 0 2px 5px rgba(0, 0, 0, 0.3),
+    0 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+.buttons {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.buttons button {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #3d3d3d;
+  font-size: 20px;
+  cursor: pointer;
+  background: linear-gradient(145deg, #333333, #292929);
+  color: #e0e0e0;
+  box-shadow: 
+    2px 2px 5px rgba(0, 0, 0, 0.2),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.buttons button:hover {
+  background: linear-gradient(145deg, #292929, #333333);
+}
+
+.buttons button:active {
+  transform: scale(0.95);
+  box-shadow: 
+    1px 1px 3px rgba(0, 0, 0, 0.2),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.1);
+}
+
+.operator {
+  color: #66b3ff !important;
+  font-weight: 500;
+  background: linear-gradient(145deg, #2d2d2d, #262626) !important;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMjHxIGmVAAAA70lEQVRoQ+2ZQQ6EIAxFvf+hXLhxwwLjgtGgIvQPaD1Jk0bK7+ujOMqyLG8MHjF4xOARg0cMHjF4xOARg0cMsPe+dV1/Yo2hE4QxeJr3+b7vR/M8n1eWBpDQzBjEIW0AIRArtBgQA/D/QLgHxGrpBCFShxi4JcSKagShEgeEuA3EqlAHId8QBOLSECtZDUKmIAjExSBWhA6EQEEQiEtArAR9CHSCIBAXhZjpExC4CQJBzPQxiH1aCkIfhGDSGISZPQWBgRBIOhvkDz2bIBAzfQxi5k9B6EMgZvoYxD4x/SH2iekOsd+Y/hD7lIWHHPUB6A0tiZzrmukAAAAASUVORK5CYII=");
+  opacity: 0.05;
+  border-radius: 8px;
+  pointer-events: none;
+}
